@@ -1,0 +1,28 @@
+# Start docker machine
+docker-machine start default
+eval "$(docker-machine env default)"
+
+# Docker-machine IP listing
+docker-machine ip default
+
+# Stop docker machine
+docker-machine stop default
+
+---------------------------------------------
+
+# Docker information list
+docker info
+
+# List all container
+docker ps -a
+
+# Interactive shell for docker with ubuntu image
+docker run -t -i ubuntu /bin/bash
+
+docker build -t rohit/sinatra:v2 .
+docker run -t -i rohit/sinatra:v2 /bin/bash
+
+docker ps -a
+docker images
+
+docker run --rm -ti -p 8181:8181 jboss-fuse-full:6.3.0
